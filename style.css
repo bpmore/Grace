@@ -5,12 +5,12 @@
 	Author: Brent Passmore
 	Author URI: http://brentpassmore.com/
 	Version: 1.0.0
-	
+
 	Tags: white, red, one-column, two-columns, right-sidebar, full-width-template, minimalist
-	
+
 	Template: genesis
 	Template Version: 2.0.0
-	
+
 	License: GPL-2.0+
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -67,6 +67,7 @@ input[type="search"] {
 body,
 .site-description {
 	font-family: sans-serif;
+	text-align: center;
 }
 
 .archive-pagination,
@@ -90,7 +91,7 @@ input[type="submit"],
 .single-post-nav,
 .title-area,
 .wp-caption-text {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* Typographical Elements */
@@ -177,8 +178,8 @@ blockquote {
     color: #a5a4a4;
     font-style: italic;
     margin: 30px 0 30px 15px;
-    padding-left: 15px;    
-}  
+    padding-left: 15px;
+}
 
 .entry-content code {
 	background-color: #333;
@@ -197,7 +198,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #555;
+	color: #777;
 	font-weight: 300;
 	line-height: 2.2;
 	margin: 0 0 24px;
@@ -257,12 +258,12 @@ img {
 }
 
 hr {
-  clear: both; 
-  float: none; 
-  width: 100%; 
+  clear: both;
+  float: none;
+  width: 100%;
   height: 1px;
   margin: 1.4em 0;
-  border: none; 
+  border: none;
   background: #ddd;
 }
 
@@ -410,7 +411,7 @@ td {
 }
 
 .full-width-content .content {
-	width: 100%;
+	width: 90%;
 }
 
 /* Primary Sidebar */
@@ -488,16 +489,16 @@ td {
 	line-height: 0;
 	height: 0;
 }
- 
+
 .clear-line {
 	display: inline-block;
 	width: 100%;
 }
- 
+
 html[xmlns] .clear-line {
 	display: block;
 }
- 
+
 * html .clear-line {
 	height: 1%;
 }
@@ -650,12 +651,12 @@ img.alignright,
 	line-height: 1.2;
 	padding-top: 10px;
 	padding-top: 1rem;
-	text-align: right;
+	text-align: center;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #e74c3c;
+	color: #777;
 }
 
 .entry-title a:hover {
@@ -750,7 +751,6 @@ img#wpstats {
     color: #999999;
     font-size: 1.4rem;
     font-weight: 300;
-    text-align: left;
 }
 
 
@@ -772,15 +772,12 @@ body.admin-bar .site-header {
 /* Title Area */
 
 .title-area {
-	float: right;
 	font-weight: 500;
 	padding: 10px 0;
 	padding: 1rem 0;
-	width: 420px;
 }
 
 .site-title {
-	float: right;
 	font-size: 60px;
 	font-size: 6rem;
 	line-height: 1;
@@ -790,12 +787,11 @@ body.admin-bar .site-header {
 }
 
 .site-title a {
-	color: #e74c3c;
+	color: #777;
 }
 
 .site-description {
 	color: #777;
-	float: right;
 	font-size: 15px;
 	font-size: 1.5rem;
 	font-weight: 300;
@@ -832,8 +828,8 @@ body.admin-bar .site-header {
 }
 
 .full-width-content .entry {
-	border-bottom: 50px solid #333;
-	border-bottom: 5rem solid #333;
+	border-bottom: 1px groove #333;
+	border-bottom: 0.01rem groove #333;
 }
 
 .page .entry {
@@ -889,7 +885,6 @@ body.admin-bar .site-header {
 	font-size: 14px;
 	font-size: 1.4rem;
 	font-weight: 300;
-	text-align: left;
 }
 
 .entry-header .entry-meta {
@@ -1086,7 +1081,7 @@ li.comment {
 .singular-thumbnail {
 	margin-bottom: 2rem;
 }
- 
+
 .attachment-singular {
 	vertical-align: top;
 }
@@ -1128,7 +1123,7 @@ li.comment {
 		padding: 12px 0;
 		padding: 1.2rem 0;
 	}
-	
+
 	.entry {
 		padding: 0;
 	}
@@ -1176,7 +1171,7 @@ li.comment {
 	.site-header .widget-area {
 		padding: 0;
 	}
-	
+
 	.site-title,
 	.site-description,
 	.title-area,
@@ -1191,7 +1186,7 @@ li.comment {
 		background-position: 8% 16px;
 		padding: 20px 3%;
 	}
-	
+
 	.entry {
 		padding: none;
 	}
@@ -1201,13 +1196,13 @@ li.comment {
 		border: none !important;
 		width: 98%;
 	}
-	
+
 	.sidebar .widget,
 	.sidebar-secondary .widget {
 		padding: 20px 0 20px 0;
 		text-align: left;
 	}
-	
+
 /*	input[type="search"] {
    		width: 50%;
    	} */
@@ -1256,12 +1251,12 @@ li.comment {
 		margin: 0;
 		width: 100%;
 	}
-	
+
 /*	.sidebar-primary,
 	.widget-area {
 		width: 90%;
 	} */
-	
+
 	.sidebar .widget .widget-wrap {
 		text-align: left;
 		display: inline-block;

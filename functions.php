@@ -19,24 +19,24 @@ add_theme_support( 'genesis-responsive-viewport' );
 //* Add Featured Image to Page and Post Above Title
 add_action ( 'genesis_entry_header', 'carry_featured_image_title_singular', 9 );
 function carry_featured_image_title_singular() {
- 
+
 	if ( !is_singular() || !has_post_thumbnail() )
 		return;
- 
+
 	echo '<div class="singular-thumbnail">';
 	genesis_image( array( 'size' => 'singular' ) );
 	echo '</div>';
- 
+
 }
 
 //* Add Previous and Next Navigation to Post
 add_action('genesis_entry_footer', 'carry_custom_pagination_links', 15 );
 function carry_custom_pagination_links() {
-if( !is_single() ) 
+if( !is_single() )
       return;
 
     previous_post_link('<div class="single-post-nav">&laquo; %link', ' ' . get_previous_post_link('%title') , FALSE);
-    echo ' / ';
+    echo ' —/— ';
     next_post_link('%link  &raquo;</div>', get_next_post_link('%title') . ' ' , FALSE);
 }
 
@@ -46,8 +46,8 @@ if( !is_single() )
 add_action( 'wp_enqueue_scripts', 'carry_google_fonts' );
 function carry_google_fonts() {
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400', array(), CHILD_THEME_VERSION );
-	
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:700', array(), CHILD_THEME_VERSION );
+
 }
 
 //* Add support for post format images
@@ -81,6 +81,7 @@ remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 remove_theme_support( 'genesis-menus' );
 
 //* Unregister layout settings
+genesis_unregister_layout( 'content-sidebar' );
 genesis_unregister_layout( 'sidebar-content' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
@@ -109,10 +110,11 @@ function unfiltered_post_meta_filter($post_meta) {
 }
 
 //* Remove the header right widget area
-unregister_sidebar( 'header-right' );
+//*unregister_sidebar( 'header-right' );
 
 //* Unregister secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
+unregister_sidebar( 'sidebar' );
 
 //* Customize entry meta in the entry header
 //add_filter( 'genesis_post_info', 'carry_post_info_filter' );
@@ -136,7 +138,7 @@ add_action( 'genesis_theme_settings_metaboxes', 'child_remove_metaboxes' );
 function child_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
     remove_meta_box( 'genesis-theme-settings-header', $_genesis_theme_settings_pagehook, 'main' );
 //    remove_meta_box( 'genesis-theme-settings-nav', $_genesis_theme_settings_pagehook, 'main' );
-    remove_meta_box( 'genesis-theme-settings-layout', $_genesis_theme_settings_pagehook, 'main' );
+//    remove_meta_box( 'genesis-theme-settings-layout', $_genesis_theme_settings_pagehook, 'main' );
     remove_meta_box( 'genesis-theme-settings-breadcrumb', $_genesis_theme_settings_pagehook, 'main' );
 //  remove_meta_box( 'genesis-theme-settings-comments', $_genesis_theme_settings_pagehook, 'main' );
 //  remove_meta_box( 'genesis-theme-settings-blogpage', $_genesis_theme_settings_pagehook, 'main' );
