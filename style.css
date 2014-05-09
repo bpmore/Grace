@@ -828,8 +828,7 @@ body.admin-bar .site-header {
 }
 
 .full-width-content .entry {
-	border-bottom: 1px groove #333;
-	border-bottom: 0.01rem groove #333;
+	padding-bottom: 90px;
 }
 
 .page .entry {
