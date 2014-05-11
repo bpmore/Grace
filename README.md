@@ -1,6 +1,8 @@
 # Grace Theme
 
 Developed by: Brent Passmore
+![Grace Screenshot](/https://raw.githubusercontent.com/bpmore/Grace/master/screenshot.png)
+![Solace screenshot image](https://raw.githubusercontent.com/bpmore/Solace/master/screenshot.png)
 
 Website URL: http://bpmo.re (demo) TBD
 
