@@ -4,7 +4,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Grace' );
-define( 'CHILD_THEME_URL', 'http://bpmo.re/' );
+define( 'CHILD_THEME_URL', 'http://bpmo.re/grace' );
 define( 'CHILD_THEME_VERSION', '1.0' );
 
 //* Add HTML5 markup structure
@@ -13,8 +13,10 @@ add_theme_support( 'html5' );
 //* Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
-//* Add new featured image size
-//TBD
+/** Custom image sizes */
+add_image_size( 'single-post-thumbnail', 380, 133, true );
+add_image_size( 'Square Image', 500, 500, true );
+add_image_size( 'Square Thumbnail', 200, 200, true );
 
 //* Reposition the primary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -50,9 +52,10 @@ add_action('genesis_after_comments', 'custom_post_navigation');
 add_action( 'wp_enqueue_scripts', 'grace_google_fonts' );
 function grace_google_fonts() {
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400|700', array(), CHILD_THEME_VERSION );
 
 }
+
 
 //* Add support for post format images
 //add_theme_support( 'genesis-post-format-images' );
@@ -146,9 +149,32 @@ function grace_footer_creds_filter( $creds ) {
 add_action( 'genesis_theme_settings_metaboxes', 'child_remove_metaboxes' );
 function child_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
     remove_meta_box( 'genesis-theme-settings-header', $_genesis_theme_settings_pagehook, 'main' );
-//    remove_meta_box( 'genesis-theme-settings-nav', $_genesis_theme_settings_pagehook, 'main' );
+    remove_meta_box( 'genesis-theme-settings-nav', $_genesis_theme_settings_pagehook, 'main' );
 //    remove_meta_box( 'genesis-theme-settings-layout', $_genesis_theme_settings_pagehook, 'main' );
     remove_meta_box( 'genesis-theme-settings-breadcrumb', $_genesis_theme_settings_pagehook, 'main' );
 //  remove_meta_box( 'genesis-theme-settings-comments', $_genesis_theme_settings_pagehook, 'main' );
 //  remove_meta_box( 'genesis-theme-settings-blogpage', $_genesis_theme_settings_pagehook, 'main' );
 }
+
+//* Featured Image in Single Posts *//
+//add_action( 'genesis_entry_content', 'sk_show_featured_image_single_posts', 9 );
+/**
+ * Display Featured Image floated to the right in single Posts.
+ *
+ * @author Sridhar Katakam
+ * @link   http://sridharkatakam.com/how-to-display-featured-image-in-single-posts-in-genesis/
+ */
+//function sk_show_featured_image_single_posts() {
+//	if ( ! is_singular( 'post' ) ) {
+//		return;
+//	}
+//
+//	$image_args = array(
+//		'size' => 'medium',
+//		'attr' => array(
+//			'class' => 'alignright',
+//		),
+//	);
+//
+//	genesis_image( $image_args );
+//}
