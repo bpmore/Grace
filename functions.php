@@ -94,6 +94,9 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+//* Unregister secondary navigation menu
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+
 //* Remove the entry header markup
 //remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
 //remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
@@ -121,7 +124,7 @@ function amethyst_enqueue_dashicons() {
 }
 
 //* Remove the header right widget area
-unregister_sidebar( 'header-right' );
+//unregister_sidebar( 'header-right' );
 
 //* Unregister secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
