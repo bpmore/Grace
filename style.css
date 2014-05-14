@@ -424,7 +424,7 @@ pre {
 
 .pull-left {
 	float: left;
-	margin: 0 3% 3% 0;
+	margin: 0 0 3%;
 	text-align: left;
 }
 
@@ -687,6 +687,20 @@ img.alignright,
 	padding-top: 10px; */
 }
 
+.genesis-grid .entry-title {
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+
+.single-portfolio .entry-title {
+	margin-bottom: 20px;
+}
+
+/*.singular-thumbnail .attachment-singular {
+	width: 230px;
+	height: 230px;
+}*/
+
 .sidebar .widget-title h1, h2, h3, h4, h5, h6,{
 	color: #fff;
 	text-align: left;
@@ -864,6 +878,42 @@ body.admin-bar .site-header {
 
 .entry {
 }
+
+.post-type-archive-portfolio .entry {
+	float: left;
+	margin-bottom: 50px;
+	width: 33%;
+}
+
+.post-type-archive-portfolio .entry:nth-of-type(3n) {
+	float: right;
+	padding-left: 30px;
+}
+
+.post-type-archive-portfolio .entry:nth-of-type(3n+1) {
+	clear: left;
+	padding-right: 30px;
+}
+
+/*.single-portfolio .entry {
+	text-align: center;
+}*/
+
+.single-portfolio .entry-content {
+	text-align: left;
+}
+
+.portfolio .singular-thumbnail {
+	width: 230px;
+	height: 230px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/*.portfolio .singular-thumbnail .entry {
+	text-align: center;
+}*/
 
 .full-width-content .entry {
 /*	padding-bottom: 40px;
@@ -1106,7 +1156,7 @@ li.comment {
 
 
 .singular-thumbnail {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 .attachment-singular {
@@ -1187,9 +1237,18 @@ li.comment {
 		margin: 2rem 3%;
 	}
 
+	.post-type-archive-portfolio .entry,
+	.site-header .title-area,
+	.site-header .search-form,
+	.site-header .widget-area,
+	.site-tagline-left,
+	.site-tagline-right {
+		text-align: center;
+	}
+
 	.full-width-content .entry {
-		border-bottom: 20px solid #333;
-		border-bottom: 2rem solid #333;
+/*		border-bottom: 20px solid #333;
+		border-bottom: 2rem solid #333; */
 	}
 
 	.page .entry {
@@ -1820,6 +1879,9 @@ ul.menu li.sfHover ul,
 
 }
 
+/* Portfolio */
+
+
 
 @media only screen and (max-width: 767px) {
 
@@ -1842,6 +1904,18 @@ ul.menu li.sfHover ul,
 	.widget-area {
 		width: 90%;
 	} */
+
+	.genesis-grid-even,
+	.genesis-grid-odd,
+	.post-type-archive-portfolio .entry {
+		width: 100%;
+	}
+
+	.post-type-archive-portfolio .entry:nth-of-type(2n),
+	.post-type-archive-portfolio .entry:nth-of-type(2n+1) {
+		float: none;
+		padding: 0;
+	}
 
 	.sidebar .widget .widget-wrap {
 		text-align: left;

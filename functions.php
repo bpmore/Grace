@@ -14,9 +14,11 @@ add_theme_support( 'html5' );
 add_theme_support( 'genesis-responsive-viewport' );
 
 /** Custom image sizes */
+add_image_size( 'featured-image', 1140, 400, true );
 add_image_size( 'single-post-thumbnail', 380, 133, true );
 add_image_size( 'Square Image', 500, 500, true );
 add_image_size( 'Square Thumbnail', 200, 200, true );
+add_image_size( 'Portfolio', 230, 230, TRUE );
 
 //* Reposition the primary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -46,7 +48,7 @@ if( !is_single() )
     next_post_link('%link &#10093;</div>', get_next_post_link('%title') . ' ' , FALSE);
 }
 
-add_action('genesis_after_comments', 'custom_post_navigation');
+//add_action('genesis_after_comments', 'custom_post_navigation');
 
 //* Enqueue Josefin Slab and Old Standard TT Google fonts
 add_action( 'wp_enqueue_scripts', 'grace_google_fonts' );
@@ -181,3 +183,35 @@ function child_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
 //
 //	genesis_image( $image_args );
 //}
+
+//* Create portfolio custom post type
+add_action( 'init', 'grace_portfolio_post_type' );
+function grace_portfolio_post_type() {
+
+	register_post_type( 'portfolio',
+		array(
+			'labels' => array(
+				'name'          => __( 'Portfolio', 'grace' ),
+				'singular_name' => __( 'Portfolio', 'grace' ),
+			),
+			'exclude_from_search' => true,
+			'has_archive'         => true,
+			'hierarchical'        => true,
+			'menu_icon'           => 'dashicons-admin-page',
+			'public'              => true,
+			'rewrite'             => array( 'slug' => 'portfolio', 'with_front' => false ),
+			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes', 'genesis-seo' ),
+		)
+	);
+
+}
+
+//* Change the number of portfolio items to be displayed (props Bill Erickson)
+add_action( 'pre_get_posts', 'grace_portfolio_items' );
+function grace_portfolio_items( $query ) {
+
+	if ( $query->is_main_query() && !is_admin() && is_post_type_archive( 'portfolio' ) ) {
+		$query->set( 'posts_per_page', '6' );
+	}
+
+}
