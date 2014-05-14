@@ -275,15 +275,92 @@ textarea {
 	border: 1px solid #ddd;
 	border-radius: 0;
 	box-shadow: 1px 1px 3px #eee inset;
-	color: #4B394E;
+	color: #555;
 	font-size: 20px;
-	padding: 5%;
+	padding: 1%;
 	width: auto;
 }
 
-input[type="search"] {
-	width: 100%;
+/*input[type="search"] {
+/*	width: 100%; */
+/*	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	background: #ededed url(images/search-icon.png) no-repeat 9px center;
+	font-family: inherit;
+	font-size: 100%;
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
 }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+input[type="search"]:hover {
+	background-color: #fff;
+}
+input[type="search"]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	cursor: auto;
+} */
+
+/* ------------------------Search--------------------------*/
+
+/* reset webkit search input browser style */
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; /* remove the search and cancel icon */
+}
+
+/* search input field */
+input[type=search] {
+	background: #fff url(images/search-icon.png) no-repeat 9px center;
+	border: solid 0px #ccc;
+	padding: 9px 10px 9px 25px;
+	width: 15px;
+	color: transparent;
+	cursor: pointer;
+
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:hover {
+	background-color: #fff;
+}
+input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+	border-color: #82C1A9;
+
+}
+input:-moz-placeholder {
+	color: transparent;
+}
+input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/*---------------END Search-------------------*/
 
 input:focus,
 textarea:focus {
@@ -323,7 +400,7 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-	background-color: #4B394E;
+	background-color: #E44249;
 }
 
 .entry-content .button:hover {
@@ -911,6 +988,10 @@ body.admin-bar .site-header {
   margin-right: auto
 }
 
+.portfolio .entry-title {
+	font-size: 28px;
+}
+
 /*.portfolio .singular-thumbnail .entry {
 	text-align: center;
 }*/
@@ -1031,7 +1112,7 @@ body.admin-bar .site-header {
 
 .comment-respond,
 .entry-pings {
-	padding: 5%;
+	padding: 0 5%;
 }
 
 .comment-content {

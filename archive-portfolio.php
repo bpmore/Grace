@@ -6,6 +6,12 @@
 //* Force full width content layout
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
+//add_action('genesis_before_loop', 'child_before_loop');
+//function child_before_loop () {
+//    global $query_string;
+//query_posts($query_string . "&order=ASC&orderby=title");
+//}
+
 //* Add even/odd post class
 add_filter( 'post_class', 'grace_even_odd_portfolio_post_class' );
 function grace_even_odd_portfolio_post_class( $classes ) {

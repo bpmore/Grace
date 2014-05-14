@@ -184,6 +184,46 @@ function child_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
 //	genesis_image( $image_args );
 //}
 
+/* Include Portfolio CPT in Search Results */
+add_filter( 'pre_get_posts', 'tgm_cpt_search' );
+/**
+ * This function modifies the main WordPress query to include an array of post types instead of the default 'post' post type.
+ *
+ * @param mixed $query The original query
+ * @return $query The amended query
+ */
+function tgm_cpt_search( $query ) {
+    if ( $query->is_search )
+		$query->set( 'post_type', array( 'post', 'portfolio' ) );
+    return $query;
+};
+/**
+* Customize the default text inside of search box
+*
+* @author Rick R. Duncan
+* @link http://www.rickrduncan.com
+*/
+function b3m_search_box_text( $text ) {
+return esc_attr( 'Search' );
+
+}
+add_filter( 'genesis_search_text', 'b3m_search_box_text' );
+
+add_filter( 'wp_nav_menu_items', 'genesis_search_primary_nav_menu', 10, 2 );
+/**
+* @author Brad Dalton
+* @example http://wpsites.net/web-design/add-search-form-to-any-genesis-nav-menu/
+* @copyright 2014 WP Sites
+*/
+function genesis_search_primary_nav_menu( $menu, stdClass $args ){
+if ( 'primary' != $args->theme_location )
+return $menu;
+if( genesis_get_option( 'nav_extras' ) )
+return $menu;
+$menu .= sprintf( '<li class="custom-search">%s</li>', __( genesis_search_form( $echo ) ) );
+return $menu;
+}
+
 //* Create portfolio custom post type
 add_action( 'init', 'grace_portfolio_post_type' );
 function grace_portfolio_post_type() {
