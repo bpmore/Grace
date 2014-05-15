@@ -326,11 +326,12 @@ input::-webkit-search-cancel-button {
 
 /* search input field */
 input[type=search] {
-	background: #fff url(images/search-icon.png) no-repeat 9px center;
-	border: solid 0px #ccc;
+	background: #82C1A9 url(images/search.png) no-repeat 0px center;
+	border: solid 1px #82C1A9;
+	box-shadow: none;
 	padding: 9px 10px 9px 25px;
 	width: 15px;
-	color: transparent;
+	color: #82C1A9;
 	cursor: pointer;
 
 	-webkit-border-radius: 10em;
@@ -343,12 +344,14 @@ input[type=search] {
 }
 input[type=search]:hover {
 	background-color: #fff;
+	box-shadow: none;
 }
 input[type=search]:focus {
 	width: 130px;
 	padding-left: 32px;
 	color: #000;
 	background-color: #fff;
+	box-shadow: none;
 	cursor: auto;
 	border-color: #82C1A9;
 
@@ -1486,324 +1489,163 @@ li.comment {
 /* Header / Primary / Secondary Navigation
 
 ------------------------------------------------------------ */
-
-
-
 .menu-primary,
-
 .menu-secondary,
-
 .site-header .menu {
-
 	clear: both;
-
 	text-align: center;
-
 	color: #808080;
-
 	font-size: 14px;
-
 	margin: 0 auto;
-
 	overflow: hidden;
-
 	width: 100%;
-
 }
-
-
 
 .site-header .menu {
-
 	float: right;
-
 	margin: 0;
-
 	width: auto;
-
 }
-
-
 
 .menu-primary ul,
-
 .menu-secondary ul,
-
 .site-header .menu ul {
-
 	float: left;
-
 	width: 100%;
-
 }
-
-
 
 .menu-primary li,
-
 .menu-secondary li,
-
 .site-header .menu li {
-
-		display: inline-block;
-
+	display: inline-block;
 	text-align: center;
-
 	list-style-type: none;
-
 }
 
-
-
-.menu-primary a span {}
-
-
+.menu-primary a span {
+}
 
 .menu-primary a,
-
 .menu-secondary a,
-
 .site-header .menu a {
-
-		color: #ffffff;
-
-		display: block;
-
-		font-size: 12px;
-
-		font-weight: 700;
-
-		padding: 15px 20px;
-
-		position: relative;
-
-		text-decoration: none;
-
-		text-transform: uppercase;
-
+	color: #ffffff;
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 15px 20px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
-
-
 .site-header .menu a {
-
 	padding: 38px 20px;
-
 }
-
-
 
 .menu-primary li a:active,
-
 .menu-primary .current-menu-item a,
-
 .menu-secondary li a:active,
-
 .menu-secondary .current-menu-item a,
-
 .site-header .menu li a:active {
-
-		background-color: #E44249;
-
-		color: #FFFFFF;
-
+	background-color: #E44249;
+	color: #FFFFFF;
 }
-
-
-
-
 
 .site-header .menu .current-menu-item a {
-
 	color:#FFFFFF;
-
 }
-
-
 
 .menu-primary li:hover a,
-
 .menu-primary li a:hover,
-
 .menu-secondary li a:hover,
-
 .menu-secondary li:hover a,
-
 .site-header .menu li a:hover,
-
 .site-header .menu li:hover a {
-
-		background-color: #E44249;
-
-		color: #FFFFFF;
-
+	background-color: #E44249;
+	color: #FFFFFF;
 }
-
-
 
 .menu-primary li li a,
-
 .menu-primary li li a:link,
-
 .menu-primary li li a:visited,
-
 .menu-secondary li li a,
-
 .menu-secondary li li a:link,
-
 .menu-secondary li li a:visited,
-
 .site-header .menu li li a,
-
 .site-header .menu li li a:link,
-
 .site-header .menu li li a:visited {
-
-		background: none repeat scroll 0 0 #82C1A9;
-
-		border-top: medium none;
-
-		color: #FFFFFF !important;
-
-		font-size: 13px;
-
+	background: none repeat scroll 0 0 #82C1A9;
+	border-top: medium none;
+	color: #FFFFFF !important;
+	font-size: 13px;
 	font-weight: 400;
-
-		padding: 10px 10px 10px 20px;
-
-		position: relative;
-
-		text-align: left;
-
-		text-transform: none;
-
-		width: 200px;
-
+	padding: 10px 10px 10px 20px;
+	position: relative;
+	text-align: left;
+	text-transform: none;
+	width: 200px;
 }
-
-
 
 .menu-primary li li a:active,
-
 .menu-primary li li a:hover,
-
 .menu-secondary li li a:active,
-
 .menu-secondary li li a:hover,
-
 .site-header .menu li li a:active,
-
 .site-header .menu li li a:hover {
-
 	background-color: #E44249 !important;
-
 	color: #fff !important;
-
 }
-
-
 
 .menu-primary li ul,
-
 .menu-secondary li ul,
-
 .site-header .menu li ul {
-
 	height: auto;
-
 	left: -9999px;
-
 	margin: 0;
-
 	position: absolute;
-
 	width: 165px;
-
 	z-index: 9999;
-
 }
-
-
 
 .menu-primary li ul a,
-
 .menu-secondary li ul a,
-
 .site-header .menu li ul a {
-
 	width: 155px;
-
 }
-
-
 
 .menu-primary li ul ul,
-
 .menu-secondary li ul ul,
-
 .site-header .menu li ul ul {
-
 	margin: -30px 0 0 230px;
-
 }
-
-
 
 .menu li:hover ul ul,
-
 .menu li.sfHover ul ul {
-
 	left: -9999px;
-
 }
-
-
 
 .menu li:hover,
-
 .menu li.sfHover {
-
 	position: static;
-
 }
-
-
 
 ul.menu li:hover>ul,
-
 ul.menu li.sfHover ul,
-
 .site-header .menu li:hover>ul,
-
 .site-header .menu li.sfHover ul {
-
 	left: auto;
-
 }
-
-
 
 .menu li a .sf-sub-indicator,
-
 .menu li li a .sf-sub-indicator,
-
 .menu li li li a .sf-sub-indicator {
-
 	position: absolute;
-
 	text-indent: -9999px;
-
 }
-
-
 
 #wpadminbar li:hover ul ul {
-
 	left: 0;
-
 }
-
-
 
 /* Buttons */
 
@@ -1854,114 +1696,58 @@ ul.menu li.sfHover ul,
 
 ------------------------------------------------------------ */
 
-
-
 .menu li.right {
-
 	float: right;
-
 }
-
-
 
 .menu li.right a {
-
 	color: #666;
-
 	display: inline;
-
 }
-
-
 
 .menu li.right a:hover {
-
 	background-color: transparent !important;
-
 	color: #E44249 !important;
-
 }
 
-
-
-.menu li.right date {}
-
-
+.menu li.right date {
+}
 
 .menu li.search {
-
 	padding: 0 1%;
-
 }
 
-
-
-.menu li.right date {padding: 38px 20px}
-
-
+.menu li.right date {
+	padding: 38px 20px
+}
 
 .menu li.rss a {
-
-		background-image: url("images/rss.png");
-
+	background-image: url("images/rss.png");
 	background-position: 4px center;
-
 	background-repeat: no-repeat;
-
 	background-color: transparent;
-
-		display: inline-block !important;
-
-		margin: 0 0 0 1%;
-
-
-
+	display: inline-block !important;
+	margin: 0 0 0 1%;
 }
-
-
 
 .menu li.twitter a {
-
 	background: url(images/twitter-nav.png) no-repeat center left;
-
 	padding: 0 0 0 2%;
-
 }
-
-
-
-
 
 .menu li.rss:visited a,
-
-.menu li.rss:hover a{
-
-		background-color: transparent !important;
-
+.menu li.rss:hover a {
+	background-color: transparent !important;
 	color: #E44249 !important;
-
 }
-
-
 
 .menu li.rss a:first-child:visited,
-
 .menu li.rss  a:first-child:hover,
-
 .menu li.rss a:last-child:visited,
-
-.menu li.rss  a:last-child:hover{
-
+.menu li.rss  a:last-child:hover {
 	background-color: #FC9700 !important;
-
-		color: #FFFFFF !important;
-
-
-
+	color: #FFFFFF !important;
 }
-
-/* Portfolio */
-
 
 
 @media only screen and (max-width: 767px) {
