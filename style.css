@@ -1,7 +1,7 @@
 /*
 	Theme Name: Grace
-	Theme URI: http://bpmo.re/
-	Description: Do less better. A mobile responsive and HTML5 theme built for the Genesis Framework.
+	Theme URI: http://bpmo.re/grace/	
+	Description: Do the right thing. Do it all the time. A mobile responsive and HTML5 theme built for the Genesis Framework.
 	Author: Brent Passmore
 	Author URI: http://brentpassmore.com/
 	Version: 1.0.0
@@ -967,12 +967,12 @@ body.admin-bar .site-header {
 
 .post-type-archive-portfolio .entry:nth-of-type(3n) {
 	float: right;
-	padding-left: 30px;
+/*	padding-left: 30px; */
 }
 
 .post-type-archive-portfolio .entry:nth-of-type(3n+1) {
 	clear: left;
-	padding-right: 30px;
+/*	padding-right: 30px; */
 }
 
 /*.single-portfolio .entry {
@@ -1314,6 +1314,22 @@ li.comment {
 	.wrap {
 		width: 100%;
 	}*/
+.post-type-archive-portfolio .entry {
+	vertical-align: top;
+	float: left;
+	margin-bottom: 50px;
+	width: 50%;
+}
+
+.post-type-archive-portfolio .entry:nth-of-type(2n) {
+	float: right;
+	padding-left: 0px;
+}
+
+/*.post-type-archive-portfolio .entry:nth-of-type(2n+1) {
+	clear: left;
+	padding-right: 0px;
+} */
 
 	.site-inner,
 	.footer-widgets {
