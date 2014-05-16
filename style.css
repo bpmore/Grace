@@ -545,6 +545,16 @@ pre {
 	width: 100%;
 }
 
+.pagination {
+	color: #4B394E;
+	font-family: 'Montserrat',sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+	clear: both;
+	padding: 3% 0;
+}
+
 /* Primary Sidebar */
 
 .sidebar-primary {
@@ -682,11 +692,13 @@ img.alignnone {
 .alignleft {
 	float: left;
 	text-align: left;
+	clear: both;
 }
 
 .alignright {
 	float: right;
 	text-align: left;
+	clear: both;
 }
 
 img.alignleft,
@@ -735,7 +747,7 @@ img.alignright,
 }
 
 .archive-description {
-	padding: 4% 4% 2.4%;
+	padding: 0;
 }
 
 .author-box {
@@ -1078,7 +1090,7 @@ body.admin-bar .site-header {
 .archive-pagination,
 .entry-pagination {
 	font-size: 14px;
-	padding: 5% 10%;
+	padding: 0% 10%;
 	text-align: center;
 }
 
@@ -1110,7 +1122,7 @@ body.admin-bar .site-header {
 }
 
 .entry-comments {
-	padding: 5%;
+	padding: 0 5%;
 }
 
 .comment-respond,
