@@ -1539,11 +1539,13 @@ Portfolio Pagination--------------------*/
 .post-type-archive-portfolio .entry {
 	float: left;
 	margin-bottom: 50px;
-	width: 33%;
+	text-align: center;
+	width: 33.33333%;
 }
 
 .post-type-archive-portfolio .entry:nth-of-type(3n) {
 	float: right;
+	text-align: center;
 /*	padding-left: 30px; */
 }
 
