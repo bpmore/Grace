@@ -4,7 +4,7 @@ Developed by: Brent Passmore
 
 Website URL: [http://bpmo.re/grace](http://bpmo.re/grace "Grace Theme")
 
-![Grace Screenshot](/https://raw.githubusercontent.com/bpmore/Grace/master/screenshot.png)
+![Grace Screenshot](https://raw.githubusercontent.com/bpmore/Grace/master/screenshot.png)
 
 ## License
 
