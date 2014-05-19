@@ -2,9 +2,9 @@
 
 Developed by: Brent Passmore
 
-Website URL: http://bpmo.re (demo) TBD
+Website URL: [http://bpmo.re/grace](http://bpmo.re/grace "Grace Theme")
 
-Website URL: http://brentpassmore.com (live site) TBD
+![Grace Screenshot](/https://raw.githubusercontent.com/bpmore/Grace/master/screenshot.png)
 
 ## License
 
