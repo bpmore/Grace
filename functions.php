@@ -5,7 +5,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Grace' );
 define( 'CHILD_THEME_URL', 'http://bpmo.re/grace' );
-define( 'CHILD_THEME_VERSION', '1.0' );
+define( 'CHILD_THEME_VERSION', '1.1' );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5' );
@@ -84,14 +84,6 @@ function child_do_layout( $opt ) {
 //* Unregister secondary navigation menu
 add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
 
-//* Modify the WordPress read more link
-//add_filter( 'the_content_more_link', 'grace_read_more' );
-//function grace_read_more() {
-
-//	return '<a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
-
-//}
-
 //* Customize entry meta in the entry header
 add_filter( 'genesis_post_info', 'grace_post_info_filter' );
 function grace_post_info_filter($post_info) {
@@ -130,29 +122,6 @@ function child_remove_metaboxes( $_genesis_theme_settings_pagehook ) {
 //  remove_meta_box( 'genesis-theme-settings-comments', $_genesis_theme_settings_pagehook, 'main' );
 //  remove_meta_box( 'genesis-theme-settings-blogpage', $_genesis_theme_settings_pagehook, 'main' );
 }
-
-//* Featured Image in Single Posts *//
-//add_action( 'genesis_entry_content', 'sk_show_featured_image_single_posts', 9 );
-/**
- * Display Featured Image floated to the right in single Posts.
- *
- * @author Sridhar Katakam
- * @link   http://sridharkatakam.com/how-to-display-featured-image-in-single-posts-in-genesis/
- */
-//function sk_show_featured_image_single_posts() {
-//	if ( ! is_singular( 'post' ) ) {
-//		return;
-//	}
-//
-//	$image_args = array(
-//		'size' => 'medium',
-//		'attr' => array(
-//			'class' => 'alignright',
-//		),
-//	);
-//
-//	genesis_image( $image_args );
-//}
 
 /**
 * Customize the default text inside of search box
